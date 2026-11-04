@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Press kit — Kaitlin Thaney</title>
+<meta name="description" content="Bios and headshot for Kaitlin Thaney, Executive Director of Invest in Open Infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..600,50&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400&family=Gloock&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .press{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:start}
+  .press .shot{border-radius:3px;overflow:hidden;background:var(--paper-2)}
+  .press .shot img{width:100%;display:block}
+  .press .dl{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+  .bio{padding:28px 0;border-top:1px solid var(--line)}
+  .bio:first-child{border-top:none;padding-top:0}
+  .bio-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:14px}
+  .bio-head h2{font:400 26px/1.2 var(--serif)}
+  .bio p{font-size:17px;line-height:1.7;color:#3b362f;max-width:68ch}
+  .bio p + p{margin-top:14px}
+  .copy{background:none;border:1px solid var(--line);border-radius:2px;padding:8px 12px;font:400 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);cursor:pointer}
+  .copy:hover{border-color:var(--ink);color:var(--ink)}
+  @media (max-width:820px){ .press{grid-template-columns:1fr;gap:32px} .press .shot{max-width:280px} }
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <a class="mark" href="../index.html">Kaitlin Thaney</a>
+  <nav><a href="../index.html#work">Work</a><a href="../writing/index.html">Writing</a><a href="../index.html#speaking">Speaking</a><a href="../clay/index.html">Clay</a><a href="../index.html#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+  <div class="wrap hero" style="padding-bottom:40px">
+    <p class="label">Press kit</p>
+    <h1 style="font-size:clamp(36px,5vw,58px)">Bios &amp; headshot</h1>
+    <p class="lede">For event programmes, introductions and articles. Use whichever length fits; no need to ask.</p>
+  </div>
+
+  <section style="padding-top:56px"><div class="wrap press">
+    <div>
+      <div class="shot"><img src="../img/kaitlin-thaney-headshot.jpg" alt="Headshot of Kaitlin Thaney"></div>
+      <div class="dl">
+        <a class="btn" href="../img/kaitlin-thaney-headshot.jpg" download>Download headshot ↓</a>
+        <p class="label" style="font-size:11px">High-res JPG · Credit not required</p>
+      </div>
+    </div>
+    <div>
+      <div class="bio" id="short">
+        <div class="bio-head"><h2>Short bio</h2><button class="copy" data-target="short-text">Copy</button></div>
+        <div id="short-text">
+          <p>Kaitlin Thaney is the Executive Director of Invest in Open Infrastructure (IOI), a nonprofit dedicated to increasing investment in and adoption of open infrastructure for research. Her career has focused on helping open infrastructure organizations with strategy, program design, participatory engagement, and sustainability. She previously served as Endowment Director at the Wikimedia Foundation and directed the program portfolio at the Mozilla Foundation, where she built the Mozilla Science Lab. She was also on the founding team of Digital Science and developed data-sharing infrastructure at Creative Commons. She serves on the boards and advisory groups of UPFRONT Global, data.org, and Internet Archive Europe.</p>
+        </div>
+      </div>
+      <div class="bio" id="long">
+        <div class="bio-head"><h2>Long bio</h2><button class="copy" data-target="long-text">Copy</button></div>
+        <div id="long-text">
+          <p>Kaitlin Thaney is the Executive Director of Invest in Open Infrastructure (IOI), a nonprofit initiative dedicated to increasing investment in and adoption of open infrastructure in research. Her career has been centered around open infrastructure organizations, helping them think strategically about program design, participatory engagement, and sustainability.</p>
+          <p>Prior to IOI, she served as the Endowment Director for the Wikimedia Foundation, where she led development of a fund to sustain the future of Wikipedia and free knowledge. Prior to joining Wikimedia, Thaney directed the program portfolio for the Mozilla Foundation, following her time building the Mozilla Science Lab, a program to serve the open research community. She was on the founding team for Digital Science, where she helped launch and advise programs to serve researchers worldwide, building on her time at Creative Commons, where she crafted legal, technical, and social infrastructure for sharing data on the web.</p>
+          <p>She also serves on the board and in advisory roles for UPFRONT Global, data.org, and Internet Archive Europe. She previously served as a board member of LYRASIS, Code for Science &amp; Society, and Open Collective Foundation, and as a founding director of DataKind UK.</p>
+        </div>
+      </div>
+      <p class="label" style="margin-top:24px">Questions or a different format? <a href="../index.html#contact">Get in touch</a></p>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <p class="label">© Kaitlin Thaney · Text CC BY 4.0</p>
+  <p class="label"><a href="../index.html">kaythaney.com</a></p>
+</div></footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=document.getElementById(b.dataset.target).innerText.trim();
+    var done=function(){var o=b.textContent;b.textContent='Copied';setTimeout(function(){b.textContent=o},1600)};
+    try{navigator.clipboard.writeText(t).then(done,function(){b.textContent='Select & copy'})}catch(e){b.textContent='Select & copy'}
+  });
+});
+</script>
+</body>
+</html>
